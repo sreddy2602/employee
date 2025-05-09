@@ -1,0 +1,65 @@
+/* Enter your custom styles here */
+.fullHeight {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+ 
+.darkBlueGoldBackground {
+    background-color: #1a237e; /* Dark Blue */
+    color: #ffd700; /* Gold */
+}
+ 
+.headerClass {
+    background-color: #283593; /* Darker Blue */
+    color: #ffd700; /* Gold */
+}
+ 
+.titleClass {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd700; /* Gold */
+}
+ 
+.contentClass {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+ 
+.tableClass {
+    background-color: #e8eaf6; /* Light Blue */
+    border-radius: 8px;
+    padding: 10px;
+    flex: 1; /* Take up remaining space */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+ 
+.headerToolbarClass {
+    background-color: #3949ab; /* Even Darker Blue */
+    color: #ffd700; /* Gold */
+}
+ 
+.headerTitleClass {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700; /* Gold */
+}
+ 
+.columnHeaderClass {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a237e; /* Dark Blue */
+}
+ 
+ 
+.columnListItemClass {
+    background-color: #c5cae9; /* Light Blue */
+    border-bottom: 1px solid #1a237e; /* Dark Blue */
+    margin-bottom: 0.9in; /* Space between records */
+}
+   
+.cellTextClass {
+    font-size: 14px;
+    color: #1a237e; /* Dark Blue */
+}

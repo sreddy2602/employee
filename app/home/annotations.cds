@@ -1,0 +1,1 @@
+using Detail as service from '../../srv/Details';

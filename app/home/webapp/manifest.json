@@ -1,0 +1,128 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "ns.home",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.17.4",
+      "toolsId": "37d95baa-239d-43a1-9a2e-9c36fca788f3"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/detail/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.135.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ns.home.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ns.home.view",
+        "async": true,
+        "viewPath": "ns.home.view"
+      },
+      "routes": [
+        {
+          "name": "RouteHome",
+          "pattern": ":?query:",
+          "target": [
+            "Home"
+          ]
+        },
+        {
+          "name": "firstPage",
+          "pattern": "firstPage/{EmployeeID}",
+          "target": [
+            "firstPage"
+          ]
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewLevel": 1,
+          "viewName": "Home"
+        },
+        "firstPage": {
+          "viewLevel": 2,
+          "viewName": "firstPage"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "ns.home.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
