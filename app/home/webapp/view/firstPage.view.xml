@@ -10,7 +10,7 @@
         upperCaseAnchorBar="false">
  
         <!-- Header Title Section -->
-        <headerTitle>
+       <headerTitle>
             <ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
                
                 <expandedHeading>
@@ -24,25 +24,27 @@
                         </m:VBox>
  
                         <m:VBox id="_IDGenVBox1">
-                            <m:Title id="_IDGenTitle2" text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true"/>
-                            <m:Label id="_IDGenLabel" text="Example of an ObjectPage with header facet"/>
+                            <m:Title id="_IDGenTitle2" text="Employee Details" wrapping="true"/>
+                            <m:Label id="_IDGenLabel" text="LTIMindtree"/>
                         </m:VBox>
                     </m:HBox>
                 </snappedHeading>
  
                 <expandedContent>
-                    <m:Label id="_IDGenLabel1" text="--LTIMindtree"/>
+                    <m:Label id="_IDGenLabel1" text="LTIMindtree"/>
                 </expandedContent>
  
                 <snappedTitleOnMobile>
-                    <m:Title id="_IDGenTitle3" text="Object Page Header with Links, Rating Indicator, and Object Status"/>
+                    <m:Title id="_IDGenTitle3" text="LTIMindtree"/>
                 </snappedTitleOnMobile>
  
                 <actions>
-                    <m:Button id="_IDGenButton" text="Edit" type="Emphasized"/>
+                    <m:Button id="_IDGenButton" text="Edit"/>
                     <m:Button id="_IDGenButton1" text="Delete"/>
                     <m:Button id="_IDGenButton2" text="Copy"/>
-                    <m:OverflowToolbarButton id="_IDGenOverflowToolbarButton" icon="sap-icon://action" type="Transparent" text="Share" tooltip="Action"/>
+                    <m:Button id="_IDGenButton211" text="Back to home" press="onBackToHome"/>
+                    <m:OverflowToolbarButton id="_IDGenOverflowToolbarButton" icon="sap-icon://action" type="Transparent" text="Share" tooltip="Action" press="onSharePress"/>
+                    <m:Button id="_IDGenButton3" text="Go to Dashboard" press="onNavigateToDashboard"/>
                 </actions>
  
             </ObjectPageDynamicHeaderTitle>
@@ -52,47 +54,38 @@
         <headerContent>
             <m:ToolbarSpacer id="id123"></m:ToolbarSpacer>
             <m:FlexBox id="_IDGenFlexBox1" wrap="Wrap" fitContainer="true">
-                <m:Avatar id="_IDGenAvatar1" src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiMediumMarginEnd" displaySize="L"/>
+                <m:Avatar id="_IDGenAvatar1" src="./images/Prat_img.jpg" class="sapUiMediumMarginEnd" displaySize="XL"/>
  
                 <m:VBox id="_IDGenVBox2" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                     <m:Title id="_IDGenTitle4" class="sapUiTinyMarginBottom">
-                        <m:Link id="_IDGenLink" text="Employee Details" press="onEmployeeProfilePress"/>
-                       
+                        <m:Link id="_IDGenLink" text="Employee Details" press="onEmployeeProfilePress"/>    
                     </m:Title>
                     <m:HBox id="_IDGenHBox1" class="sapUiTinyMarginBottom" renderType="Bare">
-                        <m:Label id="_IDGenLabel2" text="Employee Name:" class="sapUiTinyMarginEnd"/>
-                       
+                        <m:Label id="_IDGenLabel2" text="Employee Name:{StudentDetail>/employeeName}" class="sapUiTinyMarginEnd"/>  
                     </m:HBox>
                     <m:HBox id="_IDGenHBox2" class="sapUiTinyMarginBottom" renderType="Bare">
-                        <m:Label id="_IDGenLabel3" text="Employee ID:" class="sapUiTinyMarginEnd"/>
-                       
+                        <m:Label id="_IDGenLabel3" text="Employee ID:{StudentDetail>/employeeID}" class="sapUiTinyMarginEnd"/>
                     </m:HBox>
                     <m:HBox id="_IDGenHBox3">
-                        <m:Label id="_IDGenLabel4" text="Role :" class="sapUiTinyMarginEnd"/>
-                       
+                        <m:Label id="_IDGenLabel4" text="Role :" class="sapUiTinyMarginEnd"/>  
                     </m:HBox>
                     <m:HBox id="_IDGenHBox333">
-                        <m:Label id="_IDGenLabel334" text="Experience :" class="sapUiTinyMarginEnd"/>
-                       
+                        <m:Label id="_IDGenLabel334" text="Experience :{StudentDetail>/experience}" class="sapUiTinyMarginEnd"/>
                     </m:HBox>
                 </m:VBox>
-               
                 <m:VBox id="_IDGenVBox3" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                    <m:Title id="_IDGenTitle5" text="Contact Info" class="sapUiTinyMarginBottom"/>
+                    <m:Title id="_IDGenTitle5" text="Contact " class="sapUiTinyMarginBottom"/>
                     <m:HBox id="_IDGenHBox4" class="sapUiTinyMarginBottom">
-                        <core:Icon id="_IDGenIcon" src="sap-icon://account"/>
-                       
+                        <core:Icon id="_IDGenIcon" src="sap-icon://account"/>  
                     </m:HBox>
                     <m:HBox id="_IDGenHBox5" class="sapUiTinyMarginBottom">
-                        <core:Icon id="_IDGenIcon1" src="sap-icon://outgoing-call"/>
-                       
+                        <core:Icon id="_IDGenIcon1" src="sap-icon://outgoing-call"/>  
                     </m:HBox>
                     <m:HBox id="_IDGenHBox6">
                         <core:Icon id="_IDGenIcon2" src="sap-icon://email"/>
                         <m:Link id="_IDGenLink3"  class="sapUiSmallMarginBegin"/>
                     </m:HBox>
                 </m:VBox>
- 
                 <m:VBox id="_IDGenVBox4" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
                     <m:Title id="_IDGenTitle6" text="Project Details" class="sapUiTinyMarginBottom"/>
                     <m:HBox id="_IDGenHBox7" class="sapUiTinyMarginBottom">
@@ -107,19 +100,131 @@
                         <m:Label id="_IDGenLabel7" text="Team-Lead Name:" class="sapUiSmallMarginEnd"/>
                        
                     </m:HBox>
+                 
                 </m:VBox>
                     <m:VBox id="_IDGenVBox6" class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-                    <m:Title id="_IDGenTitle7"  text="Product Description" class="sapUiTinyMarginBottom" />
-                    <m:Text id="_IDGenText16"  width="320px" text="Top-design high-quality coffee mug - ideal for a comforting moment; Pack: 6; material: Porcelain - durable dishwasher and microwave-safe porcelain that cleans easily and is ideal for everyday service. Comes in two bright colors."/>
+                    <m:Title id="_IDGenTitle7"  text="" class="sapUiTinyMarginBottom" />
+                    <m:Text id="_IDGenText16"  width="320px" text=""/>
                 </m:VBox>
-               
- 
-               
- 
+                   
+                    <m:VBox id="_IDGenVBox8" class="sapUiMediumMarginEnd sapUiSmallMarginBottom">
+                    <m:Title id="_IDGenTitle8" class="sapUiTinyMarginBottom">
+                        <m:Link id="_IDGenLink1" text="Average User Rating" press="onExternalApplicationLinkPress"/>
+                    </m:Title>
+                    <m:Label id="_IDGenLabel8" text="6 Reviews"/>
+                    <m:RatingIndicator id="_IDGenRatingIndicator" value="4" iconSize="16px" />
+                    <m:Text id="_IDGenText208" text="4.0 out of 5"/>
+                   
+                </m:VBox>
             </m:FlexBox>
         </headerContent>
+        <sections>
+            <ObjectPageSection id="employeePersonalDetails" title="Employee Information">
+                <subSections>
+                    <ObjectPageSubSection id="_IDGenObjectPageSubSection" title="Employee Information">
+                        <blocks>
+                             <!-- Employee Name and Employee ID on One Side -->
+                            <m:HBox id="_IDGenHBox10">
+                                <m:VBox id="_IDGenVBox7">
+                                    <m:Title id="_IDGenTitle40085" text="Basic Info" class="sapUiSmallMarginBottom" />
+                                    <m:Label id="_IDGenLabel9" text="Employee Name:" />
+                                    <m:Text id="_IDGenText17" text="" />
+                                    <m:Label id="_IDGenLabel10" text="Employee ID:" />
+                                    <m:Text id="_IDGenText18" text="" />
+                                    <m:Label id="_IDGenLabel130" text="Work Mode:" />
+                                    <m:Text id="_IDGenText1833" text="" />
+                                   
+                                    <m:Label id="_IDGenLabel1057657" text="Experience:" />
+                                    <m:Text id="_IDGenText1867575" text="" />
+                                </m:VBox>
+                               
+                            </m:HBox>
  
+                            <!-- Role and Experience in Two Columns -->
+                            <m:HBox id="_IDGenHBox11" justifyContent="SpaceBetween">
+                                <m:VBox id="_IDGenVBox9">
+                                     <m:Title id="_IDGenTitle45585" text="Project Details" class="sapUiSmallMarginBottom" />
+                                    <m:Label id="_IDGenLabel123" text="Project Name:" />
+                                    <m:Text id="_IDGenText1754227" text="" />
+                                    <m:Label id="_IDGenLabel105007" text="Team-Lead Name:" />
+                                    <m:Text id="_IDGenText186757500" text="" />
+                                    <m:Label id="_IDGenLabel105117" text="Reporting Manager:" />
+                                    <m:Text id="_IDGenText186757533" text="" />
+                                    <m:Label id="_IDGenLabel97" text="Role:" />
+                                    <m:Text id="_IDGenText17547" text="" />
+                                </m:VBox>                              
+                            </m:HBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection id="employeeContactInfo" title="Contact Information">
+                <subSections>
+                    <ObjectPageSubSection id="_IDGenObjectPageSubSection11" title="Contact Information">
+                        <blocks>
+                             <!-- contact and mail id  on One Side -->
+                           
+                            <m:HBox id="_IDGenHBox1780">
+                                <m:VBox id="_IDGenVBox777" >
+                                    <m:Title id="_IDGenTitle4785" text="Connect" class="sapUiSmallMarginBottom" />
+                                    <m:Label id="_IDGenLabel679" text="Contact :" />
+                                    <m:Text id="_IDGenText16787" text="" />
+                                    <m:Label id="_IDGenLabel1650" text="Mail id:" />
+                                    <m:Text id="_IDGenText18675" text="" />
+                                    <m:Label id="_IDGenLabel165064" text="TelePhone :" />
+                                    <m:Text id="_IDGenText1867435" text="" />
+                                </m:VBox>    
+                            </m:HBox>
+                            <!-- address and linkedin in one side  -->
+                            <m:HBox id="_IDGenHBox16571" justifyContent="SpaceBetween">
+                                <m:VBox id="_IDGenVBox4359">
+                                    <m:Title id="_IDGenTitle433785" text="Social Accounts" class="sapUiSmallMarginBottom" />
+                                    <m:Label id="_IDGenLabel105767" text="Linkedin:" />
+                                    <m:Text id="_IDGenText1867523475" text="" />
+                                    <m:Label id="_IDGenLabel1055767" text="Twitter:" />
+                                    <m:Text id="_IDGenText18675243475" text="" />
+                                </m:VBox>                              
+                            </m:HBox>
+                            <m:HBox id="_IDGenHBox161" justifyContent="SpaceBetween">
+                                <m:VBox id="_IDGenVBox49">
+                                    <m:Title id="_IDGenTitle435" text="Address" class="sapUiSmallMarginBottom" />
+                                    <m:Label id="_IDGenLabel1057" text="Home Address :" />
+                                    <m:Text id="_IDGenText186775" text="" />
+                                    <m:Label id="_IDGenLabel107" text="Mailing Address:" />
+                                    <m:Text id="_IDGenText1875" text="" />
+                                </m:VBox>                              
+                            </m:HBox>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection id="employeePersonalInfo" title="Personal Information">
+                <subSections>
+                    <ObjectPageSubSection id="_IDGenObjectPageSusection11" title="Personal Information">
+                        <blocks>
+                             <!-- contact and mail id  on One Side -->
+                           
+                            <m:HBox id="_IDGenHBox178078">
+                                <m:VBox id="_IDGenVBox7007" >
+                                    <m:Label id="_IDGenLabel6700" text="Location :" />
+                                    <m:Text id="_IDGenText1678700" text="" />
+                                    <m:Label id="_IDGenLabel16560" text="Qualification:" />
+                                    <m:Text id="_IDGenText175" text="" />
+                                </m:VBox>    
+                            </m:HBox>
+                            <m:HBox id="_IDGenHBox1780708">
+                                <m:VBox id="_IDGenVBox788007" >
+                                    <m:Label id="_IDGenLabel164" text="Age :" />
+                                    <m:Text id="_IDGenText18675771" text="" />
+                                    <m:Label id="_IDGenLabel16022" text="Domain :" />
+                                    <m:Text id="_IDGenText186751" text="" />
+                                </m:VBox>    
+                            </m:HBox>                              
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
     </ObjectPageLayout>
- 
-</mvc:View>
- 
+   
+ </mvc:View>

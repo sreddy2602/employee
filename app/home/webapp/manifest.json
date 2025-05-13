@@ -48,7 +48,9 @@
       "minUI5Version": "1.135.0",
       "libs": {
         "sap.m": {},
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+        "sap.viz": {},
+        "sap.f": {}
       }
     },
     "contentDensities": {
@@ -60,7 +62,11 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "ns.home.i18n.i18n"
-        }
+        },
+        "": {
+          "type": "sap.ui.model.json.JSONModel",
+          "settings": {}
+      }
       },
       "": {
         "dataSource": "mainService",
@@ -105,7 +111,12 @@
           "target": [
             "firstPage"
           ]
-        }
+        },
+        {
+          "pattern": "dashboardPage",
+          "name": "dashboardPage",
+          "target": "dashboardPage"
+      }
       ],
       "targets": {
         "Home": {
@@ -115,6 +126,10 @@
         "firstPage": {
           "viewLevel": 2,
           "viewName": "firstPage"
+        },
+        "dashboardPage": {
+          "viewLevel" : 3,
+          "viewName": "dashboardPage"
         }
       }
     },
